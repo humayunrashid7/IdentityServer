@@ -26,14 +26,15 @@ namespace IdentityServer
         {
             return new List<ApiResource> {
                 new ApiResource {
-                    Name = "customAPI",
+                    Name = "api1",
                     DisplayName = "Custom API",
                     Description = "Custom API Access",
                     UserClaims = new List<string> {"role"},
                     ApiSecrets = new List<Secret> {new Secret("scopeSecret".Sha256())},
                     Scopes = new List<Scope> {
                         new Scope("customAPI.read"),
-                        new Scope("customAPI.write")
+                        new Scope("customAPI.write"),
+                        new Scope("api1")
                     }
                 }
             };
